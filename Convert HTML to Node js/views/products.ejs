@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Products</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header><h1>Our Products</h1></header>
+  <ul>
+    <% products.forEach(product => { %>
+      <li>
+        <h2><%= product.name %></h2>
+        <p>Price: $<%= product.price %></p>
+        <p><%= product.description %></p>
+        <img src="<%= product.imageUrl %>" alt="<%= product.name %>">
+      </li>
+    <% }); %>
+  </ul>
+  <footer>&copy; 2024 My Website</footer>
+</body>
+</html>
